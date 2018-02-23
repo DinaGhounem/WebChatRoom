@@ -8,6 +8,10 @@
         <servlet-name>LoggedUsers</servlet-name>
         <servlet-class>servlets.LoggedUsers</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ChatRoomServlet</servlet-name>
+        <servlet-class>servlets.ChatRoomServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisteredUsers</servlet-name>
         <url-pattern>/RegisteredUsers</url-pattern>
@@ -31,6 +35,10 @@
     <servlet-mapping>
         <servlet-name>LoggedUsers</servlet-name>
         <url-pattern>/LoggedUsers</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ChatRoomServlet</servlet-name>
+        <url-pattern>/ChatRoomServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
