@@ -36,7 +36,6 @@ public class CheckLogin  implements Filter{
         String userName = sr.getParameter("uname");
         String password = sr.getParameter("password");
        
-        LoggedUsers users = new LoggedUsers();
         
         for(int i=0;i<RegisteredUsers.registeredUsers.size();i++)
         {

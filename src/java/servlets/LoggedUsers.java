@@ -56,7 +56,7 @@ public class LoggedUsers extends HttpServlet {
         for(int i=0;i<RegisteredUsers.registeredUsers.size();i++)
         {
             User user = RegisteredUsers.registeredUsers.get(i);
-            if(user.getUserName()== userName && user.getPassword()== password)
+            if(user.getUserName().equals(userName) && user.getPassword().equals(password))
             {
                 user.setStatus(1);
                 break;
