@@ -74,7 +74,7 @@
         <table border="1">
             <tr>
                 <th>USER</th>
-                <th>STATUS</ths>
+                <th>STATUS</th>
             <tbody id="displayUsers"></TBODY>
             </tr>
         </table>
