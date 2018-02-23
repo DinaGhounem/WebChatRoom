@@ -71,32 +71,37 @@
         <form method="post" action="LogoutServlet">
             <input type="submit" value="Logout" id="logoutBtn">
         </form>
-        <table border="1">
-            <tr>
-                <th>USER</th>
-                <th>STATUS</th>
-            <tbody id="displayUsers"></TBODY>
-            </tr>
-        </table>
-        <table>
-            <tr>
-                <td>
-                    <LABEL>Message :</LABEL> <input type="text" value="" name="myMessage" id="myMessage"/>
-                    <br>
-                    <input type="button" value="Send" id="sendBtn"/>
-                    <br><br><br><br>
-                    <div>
-                        <TABLE border="1">
-                            <TR>
-                                <th>NAME</th>
-                                <TH>MESSAGE</TH>
-                            <tbody id="displayMessages"></TBODY>
-                            </TR>
-                        </TABLE>
-                    </div>
-                </td>
-            </tr>
-        </table>
+        <div style="width: 100%;">
+            <div style="float:left; width:10%">
+                <table border="1">
+                    <tr>
+                        <th>USER</th>
+                        <th>STATUS</th>
+                    <tbody id="displayUsers"></TBODY>
+                    </tr>
+                </table>
+            </div>
+            <div style="float:right; width: 90%">
+                <table>
+                    <tr>
+                        <td>
+                            <LABEL>Message :</LABEL> <input type="text" value="" name="myMessage" id="myMessage"/>
+                            <input type="button" value="Send" id="sendBtn"/>
+                            <br><br><br><br>
+                            <div style="alignment-adjust: middle;">
+                                <TABLE border="1">
+                                    <TR>
+                                        <th>NAME</th>
+                                        <TH>MESSAGE</TH>
+                                    <tbody id="displayMessages"></TBODY>
+                                    </TR>
+                                </TABLE>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </CENTER>
 </body>
 </html>
