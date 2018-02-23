@@ -14,17 +14,16 @@
     </head>
     <body>
         <center>
-            <form method="post">
+            <form method="post" action="LoggedUsers" class="formStyle">
                 <h1>Login Form</h1>
-                <div id="status"/>
-                <Label>Enter Your Name:</label><input type="text" value="" name="uname">
+                <Label> Username:</label><input type="text" value="" name="uname">
                 <br>
-                <Label>Enter Your Password:</label><input type="password" value="" name="password">
+                <Label> Password:</label><input type="password" value="" name="password">
                 <br>
-                <input type="button" value="SignUp">
+                <input type="submit" value="Login">
             </form>
-            <br><br><br><br><br><br><br>
-            <a href="RegistrationForm.jsp"> Please Signup</a>
+            <br><br><br>
+            <a href="RegistrationForm.jsp">For First Time .. Please Sign Up!!</a>
         </center>
     </body>
 </html>

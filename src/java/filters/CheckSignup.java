@@ -21,7 +21,7 @@ public class CheckSignup implements Filter{
 
     @Override
     public void doFilter(ServletRequest sr, ServletResponse sr1, FilterChain fc) throws IOException, ServletException {
-       String userName = sr.getParameter("uname");
+        String userName = sr.getParameter("uname");
         String password = sr.getParameter("password");
         String email = sr.getParameter("email");
         

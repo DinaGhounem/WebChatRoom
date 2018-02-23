@@ -14,14 +14,14 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import static servlets.RegisteredUsers.registeredUsers;
 
 /**
  *
  * @author Dina PC
  */
-public class RegisteredUsers extends HttpServlet {
+public class LoggedUsers extends HttpServlet {
 
-    public static ArrayList<User> registeredUsers = new ArrayList<>();
     
     protected void goChat(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -29,21 +29,22 @@ public class RegisteredUsers extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("ChatPage.jsp");
             rd.forward(request, response);
     }
-    //post method to add new registered users
+    
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-               
         String userName = request.getParameter("uname");
         String password = request.getParameter("password");
-        String email = request.getParameter("email");
-        int status = 1;
         
-        //adding the registered user in users arraylist
-        User user = new User(userName, password, email, status);
-        registeredUsers.add(user);
-        
+        for(int i=0;i<RegisteredUsers.registeredUsers.size();i++)
+        {
+            User user = RegisteredUsers.registeredUsers.get(i);
+            if(user.getUserName()== userName && user.getPassword()== password)
+            {
+                user.setStatus(1);
+                break;
+            }
+        }
         goChat(request, response);
     }
- 
 }

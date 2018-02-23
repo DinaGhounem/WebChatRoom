@@ -3,7 +3,11 @@
     <servlet>
         <servlet-name>RegisteredUsers</servlet-name>
         <servlet-class>servlets.RegisteredUsers</servlet-class>
-    </servlet>    
+    </servlet>
+    <servlet>
+        <servlet-name>LoggedUsers</servlet-name>
+        <servlet-class>servlets.LoggedUsers</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>RegisteredUsers</servlet-name>
         <url-pattern>/RegisteredUsers</url-pattern>
@@ -16,6 +20,18 @@
         <filter-name>CheckSignup</filter-name>
         <url-pattern>/RegisteredUsers</url-pattern>
     </filter-mapping>
+    <filter>
+        <filter-name>CheckLogin</filter-name>
+        <filter-class>filters.CheckLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>CheckLogin</filter-name>
+        <url-pattern>/LoggedUsers</url-pattern>
+    </filter-mapping>
+    <servlet-mapping>
+        <servlet-name>LoggedUsers</servlet-name>
+        <url-pattern>/LoggedUsers</url-pattern>
+    </servlet-mapping>
     <session-config>
         <session-timeout>
             30

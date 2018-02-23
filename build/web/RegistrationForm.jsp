@@ -14,9 +14,8 @@
     </head>
     <body>
         <center>
-            <form mehtod= "post" action="RegisteredUsers" class="formStyle">
+            <form mehtod= "get" action="RegisteredUsers" class="formStyle">
                 <h1>Registration Form</h1>
-                <div id="status"></div>
                 <Label>Enter Your Username: </label><input type="text" value="" name="uname" id="uname">
                 <br>
                 <Label>Enter Your Password: </label><input type="password" value="" name="password" id="password">
